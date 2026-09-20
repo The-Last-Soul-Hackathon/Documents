@@ -6,7 +6,7 @@
 |---|---|---|
 | Main backend | Node.js + Express (monolith) | Handles auth, listing, ordering, payment orchestration, logistics coordination |
 | AI service | Python + FastAPI (separate service) | Forecasting (Prophet) and route optimization (OR-Tools) — libraries not well-supported in Node |
-| Database | PostgreSQL | Relational integrity needed for stock reservation, escrow state, FK constraints across many entities |
+| Database | Supabase | Relational integrity needed for stock reservation, escrow state, FK constraints across many entities |
 | Payment | Gateway with authorize/capture support (e.g., Razorpay) | Implements escrow *behavior* without requiring a PA/PG license |
 | Maps/routing | Any maps API with distance-matrix support (e.g., Google Maps Distance Matrix, OSRM) | Feeds OR-Tools VRP solver |
 | Reference data | Agmarknet API/CSV | Mandi price reference, demand-forecast cold-start proxy |
